@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<title>CMM434 YurinoTan Assignment3 </title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body> 
+<header>
+  <div class="navbar sticky" >
+  <nav class="topnav" id="myTopnav">
+    <ul>
+      <li><a href="#">WOMEN</a>
+        <ul>
+          <li><a href="#">All Clothing</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="Sweaters.html">Sweaters</a></li>
+          <li><a href="#">Shirts&Blouses</a></li>
+          <li><a href="#">Blazers</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">Pants</a></li>
+          <li><a href="#">Shorts</a></li>
+          <li><a href="#">Skirts</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#">MEN</a>
+        <ul>
+          <li><a href="#">All Cothing</a></li>
+          <li><a href="#">Tops</a></li>
+          <li><a href="#">Sweaters</a></li>
+          <li><a href="#">Shirts</a></li>
+          <li><a href="#">Suit&Blazers</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">Pants</a></li>
+          <li><a href="#">Shorts</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#">SALE</a> 
+      </li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </nav>
+
+  <a href="index.html"><h1>sStyle</h1></a>
+  <form class="example" action="action_page.php">
+    <div id="myDIV">
+      <input type="text" placeholder="Search.." name="search">
+    </div>
+    <button onclick="myFunction()" type="submit"><i class="fa fa-search"></i></button>
+  </form>
+  
+    <img src="Logo/wishlisticon.png"
+      class="wishbtn"
+      alt="heart logo"
+      title="wishlist"
+      height="30px"
+      width="auto"
+    />       
+  </div>
+</header>
+
+<div class="content">
+
+  <!-- The overlay -->
+  <div id="Filtersection" class="filteroverlay">
+
+  <!-- Button to close the overlay navigation -->
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <!-- Overlay content -->
+  <div class="filter-overlay-content">
+
+  <button class="accordion">Style</button>
+    <div class="panel">
+      <ul>
+        <li>Cardigans</li>
+        <li>Cashmere Sweaters</li>
+        <li>Chunky Sweaters</li>
+        <li>Crew Neck</li>
+        <li>Funnel Neck</li>
+        <li>Hoodie Sweaters</li>
+        <li>Oversized</li>
+        <li>Jumpers</li>
+        <li>Sweater Dresses</li>
+        <li>V Neck Sweate</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Size</button>
+    <div class="panel">
+      <ul>
+        <li>XS</li>
+        <li>S</li>
+        <li>M</li>
+        <li>L</li>
+        <li>XL</li>
+        <li>XXL</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Color</button>
+    <div class="panel">
+      <ul>
+        <li>Black</li>
+        <li>Grey</li>
+        <li>White</li>
+        <li>Ivory</li>
+        <li>Beige</li>
+        <li>Brown</li>
+        <li>Purple</li>
+        <li>Blue</li>
+        <li>Green</li>
+        <li>Yellow</li>
+        <li>Orange</li>
+        <li>Pink</li>
+        <li>Red</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Price</button>
+    <div class="panel">
+      <ul>
+        <li>Under$20</li>
+        <li>$20 - $50</li>
+        <li>$50 - $100</li>
+        <li>$100-$200</li>
+        <li>$200 - $300</li>
+        <li>$300 - $400</li>
+        <li>$400 - $500</li>
+        <li>Over $500</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Material</button>
+    <div class="panel">
+      <ul>
+        <li>Cardigans</li>
+        <li>Cashmere Sweaters</li>
+        <li>Chunky Sweaters</li>
+        <li>Crew Neck</li>
+        <li>Funnel Neck</li>
+        <li>Hoodie Sweaters</li>
+        <li>Oversized</li>
+        <li>Jumpers</li>
+        <li>Sweater Dresses</li>
+        <li>V Neck Sweate</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Neck Style</button>
+    <div class="panel">
+      <ul>
+        <li>100% Cashmere</li>
+        <li>100% Cotton</li>
+        <li>100% Linen</li>
+        <li>100% Wool</li>
+        <li>Cashmere Blend</li>
+        <li>Cotton Blend</li>
+        <li>Linen Blend</li>
+        <li>Wool Blend</li>
+        <li>Fleece</li>
+        <li>Lace</li>
+        <li>Velvet</li>
+        <li>Synthetic</li>
+      </ul>
+    </div>
+
+  <button class="accordion">Sleeve</button>
+    <div class="panel">
+      <ul>
+        <li>Long Sleeve</li>
+        <li>3/4 Sleeve</li>
+        <li>ShortSleeve</li>
+        <li>Sleeveless</li>
+      </ul>
+    </div>
+
+  </div>  
+  </div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+
+  <span onclick="openNav()" class="Filtertab">Filter</span>
+
+
+  <section id="products">
+    <div class="row">         
+      <div class="item">
+        <img src="Images/DamagedKnitSweater.jpg" alt="" />
+        <p>Damaged Knit Sweater<br>$100</p>
+      </div>      
+      <div class="item">
+        <img src="Images/StripedCottonCardigan.jpg" alt="" />
+        <p>Striped Cotton Cardigan<br>$80</p>
+      </div>        
+      <div class="item">
+        <img src="Images/RibKnitSweater.jpg" alt="" />
+        <p>Rib Knit Sweater<br>$80</p>
+      </div>
+      <div class="item">
+        <img src="Images/RedOversizedTurtleneck.jpg" alt="" />
+        <p>Red Oversized Turtleneck Sweater<br>$50</p>
+      </div>
+      <div class="item">
+        <img src="Images/V-NeckSweater.jpg" alt="" />
+        <p>V-Neck Sweater<br>$50</p>
+      </div>
+      <div class="item">
+        <img src="Images/Mock-Neck Sweater.jpg" alt="" />
+        <p>Mock-Neck Sweater<br>$69</p>
+      </div>
+      <div class="item">
+        <img src="Images/YellowTurtleneckSweater.jpg" alt="" />
+        <p>Yellow Turtleneck Sweater<br>$50</p>
+      </div>
+      <div class="item">
+        <img src="Images/PulloverStripedSweater.jpg" alt="" />
+        <p>Pullover Striped Sweater<br>$69</p>
+      </div>
+      <div class="item">
+        <img src="Images/GrayV-NeckSweater.jpg" alt="" />
+        <p>Gray V-Neck Sweater<br>$50</p>
+      </div>
+    </div>
+  </section>  
+
+</div>
+
+  <footer>
+    <nav>
+      <ul class="policy">
+        <li><a href="#">Terms& Condition</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookies</a></li>
+        <li><a href="#">Accesibility</a></li>
+      </ul>
+    </nav>
+    <p>copryright@YurinoTan</p>
+  </footer>
+
+  
+<script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
+  
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + "px";
+      }
+    });
+  }
+</script>
+  
+<script>
+/* Open when someone clicks on the span element */
+function openNav() {
+  document.getElementById("Filtersection").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("Filtersection").style.width = "0%";
+}
+</script>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myDIV");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>

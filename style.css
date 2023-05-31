@@ -1,0 +1,934 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+  v2.0 | 20110126
+  License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ margin: 0;
+ padding: 0;
+ border: 0;
+ font-size: 100%;
+ font: inherit;
+ vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+ display: block;
+}
+body {
+ line-height: 1;
+}
+ol, ul {
+ list-style: none;
+}
+blockquote, q {
+ quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content: '';
+ content: none;
+}
+table {
+ border-collapse: collapse;
+ border-spacing: 0;
+}
+
+
+/* ----------------- START EDITING HERE ------------- */
+
+body{
+ background-color: white;
+ width: 100%;
+}
+
+
+.navbar {
+  height:100px;
+  width: 100%;
+  background-color: white; 
+  display: flex; /*---this and---*/
+  justify-content: center; /*---this combination makes elements sit side by side---*/
+  justify-content: space-evenly;
+  padding-top: 30px;
+}
+/* Add a black background color to the top navigation */
+.topnav {
+  font-size: 14pt;    
+  display: flex;
+  justify-content: center;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  color: black;
+  background-color: white;
+}
+/* Style the links inside the navigation bar */
+.topnav li a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+/* Change the color of links on hover */
+.topnav li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+/* Hide the link that should open and close the topnav on small screens */
+.topnav a.icon {
+  display: none;
+  color: black;
+  width: 40px;
+  font-size: 24px;
+}
+ul li {
+  float: left;
+  padding: 0 20px;
+  position: relative;
+}
+ul li ul {
+  display: none;
+  position: absolute;
+  z-index:20;
+ 
+}
+ul li:hover ul {
+  display: block;
+  background-color: white;
+  margin-top:50PX;
+}
+ul li ul li {
+  float: none;
+}
+/*---- End header navigation drop down ----*/
+
+/* Page content */
+.content {
+  padding-top: 100px;
+}
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index:15;
+}
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+header{
+  z-index: 10;
+
+}
+
+* {
+  box-sizing: border-box;
+}
+/* Style the search field */
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border-top:none;
+  border-right:none;
+  border-left:none;
+  border-bottom-width: 2px;
+  border-bottom-color: blaxk;
+  float: left;
+  width: 70%;
+  background: white;
+}
+/* Style the submit button */
+form.example button {
+  float: left;
+  
+  width: 20%;
+  padding: 10px;
+  color: black;
+  background-color: white;
+  font-size: 17px;
+  cursor: pointer;
+  border: none;
+}
+form.example button:hover {
+  background: gray;
+}
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+}
+h1{
+  font-size:40px;
+  padding: 0 100px; 
+}
+h2{
+  font-size: 60px;
+  color: white;
+  text-align: center;
+  line-height: 50px;
+  padding-top: 200px;
+}
+h3{
+  color: white;
+}
+h4{
+  font-size: 36pt;
+}
+h5{
+  font-size: 36pt;
+  padding-bottom: 30px;
+  color: white;
+}
+h6{
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24pt;
+  padding-top: 30px;
+  padding-left: 50px;
+}
+
+/*---------------------Slider Rules-----------------*/
+     /* Slideshow container */
+     .slideshow-container {
+      max-width: 1200px;
+      position: relative;
+      margin: auto;
+      z-index: 1;
+    }
+   
+    /* Hide the images by default */
+    .mySlides {
+      display: none;
+    }
+   
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+   
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+   
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+   
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 22px;
+      padding: 8px 12px;
+      position: relative;
+      bottom: 100px;
+      width: 100%;
+      text-align: center;
+    }
+   
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+   
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+   
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+   
+    /* Fading animation */
+    .fade {
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+   
+    @keyframes fade {
+      from {opacity: .4}
+      to {opacity: 1}
+    }    
+
+
+    .boxcolorchange {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      animation-name: example;
+      animation-duration: 4s;
+    }
+   
+    @keyframes example {
+      from {background-color: red;}
+      to {background-color: yellow;}
+    }
+
+
+/*----------------ButtonDesign--------------------*/
+ .btn{
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  background-color: #717171;
+  border: none;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.btncontainer a {
+  text-decoration: none;
+}
+
+/*------------------MiddleTwoColumnsSection--------------------*/
+
+#middleTwoColumns{
+  width: 80%;
+  margin: 0px auto;
+  padding: 90px auto;
+  overflow: auto;
+}
+.WomenMen{
+  width: 35%;
+  height: 430px;
+  margin: 5%;
+  background-color: black;
+  text-align: center;
+  line-height: 400px;  
+  float: left;
+  font-size: 36pt;
+  transition: width 1s;
+}
+.WomenMen:hover {
+  width: 300px;
+  font-size: 60px;
+}
+
+/*------------------NewArrivals--------------------*/
+#NewArrivals {
+  display: flex;
+  justify-content: center;
+  margin: 100px auto;
+  width: 80%;
+}
+.Newimg {
+  display: flex;
+  justify-content: center; /*should I put width and height for the images on CSS instead of on HTML?*/
+}
+.row{
+  margin: 0 10px;
+}
+.row p {
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12pt;
+  padding-top: 20px;
+}
+.row p a {
+  text-decoration: none;
+  color: black;
+}
+.row p a:hover {
+  text-decoration: underline;
+}
+/*------------------Video-------------------*/
+
+video {
+  max-width: 100%;
+  height: auto;
+  
+}
+.vidcontainer{
+	width: 100%;
+	position: relative;
+}
+.overlay {
+  position: absolute;
+	top:0;
+	left:0;
+	bottom: 0;
+	right: 0;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.textBox{
+	  position: relative;
+  top: 50%;
+}
+.overlay a {
+  text-decoration: none;
+  color: white;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24pt;
+
+}
+.overlay a:hover {
+  text-decoration: underline;
+}
+
+/*------------------For You--------------------*/
+
+#ForYou {
+  width: 80%;
+  margin: 100px auto; 
+}
+.ForYouCap {
+  display: flex;
+  text-align: left;
+  margin: 20px auto;
+}
+.ForYouCap li a{
+  font-size: 30pt;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+}
+.ForYouCap li a:hover{
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+}
+
+/*------------------SignUp--------------------*/
+
+/* Style the form element with a border around it */
+
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+/* Style the input elements and the submit button */
+.container input[type=text], input[type=submit] {
+  width: 60%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+.container input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+.container input[type=submit] {
+  background-color: white;
+  color: black;
+  border: none;
+}
+
+.container input[type=submit]:hover {
+  opacity: 0.8;
+}
+
+
+/*------------------Pinterest--------------------*/
+
+.pinterest {
+  background-color: white;
+  margin: 70px auto;
+  width: 80%;
+}
+.center {
+  display:block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pinterestimg {
+  width: 960px;
+  height: 801px;
+}
+
+/*------------------Footer--------------------*/
+
+footer{
+  background-color: white;
+  height: 90px;
+  width: 100%;
+  color: black;
+  font-size: 10pt;
+  text-align: center;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  overflow: auto;
+}
+footer li a {
+  text-decoration: none;
+  color:black;
+  float: left;
+}
+footer p {
+  float: right;
+  padding-right: 30px;
+}
+/*----------------------------------------------------------------*/
+
+@media screen and (max-width: 721px) and (max-width: 990px){
+  .navbar { 
+   height:70px;
+   width: 100%;
+ }
+ h1{
+   font-size:40px;
+   padding: 0; 
+ }
+ h4{
+   font-size: 30pt;
+   text-align: center;
+ }
+ h5{
+   font-size: 30pt;
+   text-align: center;
+ }
+ h6{
+   font-weight: 300;
+   font-size: 24pt;
+   text-align: center;
+ }
+ ul li {
+  float: left;
+  padding: 0 0px;
+  position: relative;
+}
+.WomenMen {
+  width: 300px;
+  height: 300px;
+  margin: 5%;
+  line-height: 300px;  
+  font-size: 40px;
+}
+ .row img{
+   width: 189px;
+   height: 245px; 
+ }
+ #NewArrivals {
+   text-align: center;
+   display: block;
+ }
+ .NewCap {
+   padding-bottom: 30px;
+ }
+ .Newimg {
+  display: flex;
+  justify-content: center;
+  overflow: scroll; 
+}
+ .ForYouCap {
+  display: flex;
+  text-align: center;
+  margin: 20px auto;
+
+}
+.textBox{
+  position: relative;
+top: 30%;
+}
+.text {
+  font-size: 15px;
+}
+.ForYouCap li {
+   font-size: 24pt;
+}
+.ForYouCap li a{
+  font-size: 24pt;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  padding: 0 17px;
+}
+.pinterestimg {
+  width: 70%;
+  height: auto;
+}
+.footer {
+   font-size: 8pt;
+ }
+}
+
+/*----------------------------------------------------------------*/
+
+ /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+ .topnav li  {display: none;}
+ .topnav a.icon {
+   float: right;
+   display: block;
+ }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+ .topnav.responsive {position: relative;}
+ .topnav.responsive a.icon {
+   position: absolute;
+   right: 0;
+   top: 0;
+ }
+ .topnav.responsive li  {
+   float: none;
+   display: block;
+   text-align: left;
+ }
+ h1{
+   font-size:30pt;
+   padding: 0; 
+ }
+ h2{
+   font-size:30pt;
+ }
+ h3{
+   font-size: 30pt;
+ }
+ h4{
+   font-size: 30pt;
+   text-align: center;
+ }
+ h5{
+   font-size: 30pt;
+   text-align: center;
+ }
+ h6{
+   font-weight: 300;
+   font-size: 16pt;
+   text-align: center;
+ }
+ .row img{
+   width:189px;
+   height: 245px;
+ }
+ #NewArrivals {
+   text-align: center;
+   display: block;
+ }
+ .Newimg {
+   display: flex;
+   justify-content: center;
+ }
+ .NewCap {
+   padding-bottom: 30px;
+ }
+ .ForYouCap li {
+   font-size: 24pt;
+ }
+ .footer {
+   font-size: 8pt;
+ }
+ #middleTwoColumns{
+   width:100%;
+   padding: 90px auto;
+   flex-flow: wrap;
+ }
+ .WomenMen{
+   width: 100%;
+   height: 250px;
+   margin: 5%;
+   background-color: black;
+   text-align: center;
+   line-height: 200px;  
+ }
+ .Newimg {
+   display: flex;
+   justify-content: center;
+   overflow: scroll; 
+ }
+ .NewCap {
+   padding-bottom: 30px;
+ }
+ .SignUp {
+   background-color: #bbb;
+   color: black;
+   height: 200px;
+   width: 100%;
+ }
+ .pinterest {
+   background-color: white;
+   margin: 70px auto;
+ }
+ .pinterestimg {
+  width: 80%;
+  height: auto;
+}
+ footer{
+ font-size: 10pt;
+ text-align: center;
+ width:70%;
+ line-height: 25px;
+}
+
+}
+
+/*------------------------Page2------------------------*/
+
+#products {
+  background-color: white;
+  width: 75%;
+  float: right;
+}
+.row {
+  margin: 0 30px;
+}
+.row::after {
+  content:"";
+  clear:both;
+  display: table;
+}
+
+.item { 
+  float: left;
+  padding: 10px 20px 40px 20px;
+  justify-content: space-between;
+  margin: initial !important;
+}
+.item img {
+  width: 276px;
+  height: 385px;
+}
+.item p {
+  margin-top: 5px;
+  text-align: left;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14pt;
+  color: black;
+
+}
+
+.accordion {
+  background-color: white;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+.panel ul li {
+  width: 100%;
+  margin-left: auto;
+  display: block;
+  line-height: 30pt;
+  color: black;
+  font-family:'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14pt;
+}
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 13px;
+  color: #777;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+ul.no-bullets {
+  list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+}
+
+/* The Overlay (background) */
+.filteroverlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(0,0,0); /* Black fallback color */
+  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.filter-overlay-content {
+  position: relative;
+  top: 15%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.filteroverlay button {
+  padding: 8px;
+  font-size: 20pt;
+  color: black;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* Position the close button (top right corner) */
+.filteroverlay .closebtn {
+  position: absolute;
+  top: 90px;
+  right: 45px;
+  font-size: 60px;
+  color: black;
+}
+#Filtersection {
+  width:25%;
+  background-color: white;
+  display: block;
+}
+.closebtn{
+  display: none;
+}
+.Filtertab {
+font-family:'Open Sans', sans-serif;
+font-style: normal;
+font-weight: 300;
+font-size: 14pt;
+padding-left: 17px;
+display: none;}
+
+@media screen and (max-width: 600px) {
+ .filteroverlay .accordion {font-size: 20px}
+  .panel ul li {
+    line-height: 30pt
+  }
+  .filteroverlay .closebtn {
+    font-size: 40px;
+    top: 12%;
+    right: 35px;
+  }
+  div .item img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #products {
+    background-color: white;
+    width: 100%;
+  }
+  .item p {
+    margin-top: 1px;
+    text-align: left;
+    font-family:'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12pt;
+    color: black;
+  }
+  .item { 
+    float: left;
+    justify-content: space-between;
+    margin: initial !important;
+  }
+  .Filtertab{
+    font-family:'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14pt;
+    padding-left: 48%;
+    padding-bottom: 17px;
+    display: block;
+  }
+  .closebtn{
+    display: block;
+  }
+  #Filtersection {
+    width:0;
+  }
+}

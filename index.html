@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+<title>CMM434 YurinoTan Assignment3 </title>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="style.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body> 
+<header>
+  <div class="navbar sticky" >
+  <nav class="topnav" id="myTopnav">
+    <ul>
+      <li><a href="#">WOMEN</a>
+        <ul>
+          <li><a href="#">All Clothing</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="Sweaters.html">Sweaters</a></li>
+          <li><a href="#">Shirts&Blouses</a></li>
+          <li><a href="#">Blazers</a></li>
+          <li><a href="#">Dresses</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">Pants</a></li>
+          <li><a href="#">Shorts</a></li>
+          <li><a href="#">Skirts</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#">MEN</a>
+        <ul>
+          <li><a href="#">All Cothing</a></li>
+          <li><a href="#">Tops</a></li>
+          <li><a href="#">Sweaters</a></li>
+          <li><a href="#">Shirts</a></li>
+          <li><a href="#">Suit&Blazers</a></li>
+          <li><a href="#">Jackets&Coats</a></li>
+          <li><a href="#">Jeans</a></li>
+          <li><a href="#">Pants</a></li>
+          <li><a href="#">Shorts</a></li>
+        </ul>
+      </li>
+    </ul>
+    <ul>
+      <li><a href="#">SALE</a> 
+      </li>
+    </ul>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>    
+  </nav>
+
+    <a href="index.html"><h1>sStyle</h1></a>
+
+    <form class="example" action="action_page.php">
+	<div id="myDIV">
+      <input type="text" placeholder="Search.." name="search">
+	 </div>
+      <button onclick="myFunction()" type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+    <img src="Logo/wishlisticon.png"
+      class="wishbtn"
+      alt="heart logo"
+      title="wishlist"
+      height="30px"
+      width="auto"
+    />       
+  </div>
+</header>
+
+<div class="content">
+
+<!------------- Slideshow container ------------->
+ <div class="slideshow-container">
+
+<!-- Full-width images with number and caption text -->
+ <div class="mySlides fade">
+    <div class="numbertext">1 / 2</div>
+    <img src="Images/Slideimage1.png" style="width:100%">
+    <div class="text btncontainer">
+      <a href="Sweaters.html" class="btn">SHOP SWEATERS</a>
+    </div>
+  </div>
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 2</div>
+    <img src="Images/Untitled-2.png" style="width:100%">
+  </div>
+    
+    <!-- Next and previous buttons -->
+   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+   <a class="next" onclick="plusSlides(1)">&#10095;</a>
+ </div>
+ <br>
+  <!-- The dots/circles -->
+ <div style="text-align:center">
+   <span class="dot" onclick="currentSlide(1)"></span>
+   <span class="dot" onclick="currentSlide(2)"></span>
+ </div>
+<!------------- End Slideshow container -------------->
+
+
+<!--------------WomenMen------------------------------->
+
+  <section id="middleTwoColumns">
+    <div class="WomenMen">
+      <h3>Women's</h3>
+    </div>
+    <div class="WomenMen">
+      <h3>Men's</h3>
+    </div>
+  </section>
+
+<!----------------New Arrivals------------------------->
+
+  <section id="NewArrivals">
+    <div class="NewCap">
+      <h4>New Arrivals</h4>
+    </div>
+
+    <div class="Newimg">
+      <div class="row">
+        <img
+        src="Images/NewArrivals1.jpg"
+        width="254px"
+        height="322px"
+        />
+        <p><a href="#">White Tank Top</a></p>
+      </div>
+      <div class="row">
+        <img
+        src="Images/NewArrivals2.jpg"
+        width="254px"
+        height="322px"
+        />
+        <p><a href="#">White Cotton Shirt</a></p>
+      </div>
+      <div class="row">
+        <img
+        src="Images/NewArrivals3.jpg"
+        width="254px"
+        height="322px"
+        />
+        <p><a href="#">Cowl Top</a></p>
+      </div>
+    </div>
+  </section>
+
+<!----------------Video------------------------->
+
+<div class="vidcontainer">
+  <video loop autoplay class="video">
+    <source src="images/videosection.mp4"
+           type="video/mp4">  
+  </video>   
+  <div class="overlay">
+   <div class="textBox"> <h5>Good on people, the planet, animals</h5>
+    <a href="#">Shop sustainability styles -></a></div>
+  </div>
+</div>
+
+<!----------------ForYou------------------------->
+
+<section id="ForYou">
+  <nav class="ForYouCap">
+    <ul>
+      <li><a href="#">For You</a></li>
+      <li><a href="#">Wishlist</a></li>
+    </ul>
+  </nav>
+  <div class="Newimg">
+    <div class="row">
+    <img
+     src="Images/foryou1.jpg"
+     width="254px"
+     height="322px"
+    />
+    <p><a href="#">White Tanktop</a></p>
+    </div>
+    <div class="row">
+    <img
+     src="Images/foryou2.jpg"
+     width="254px"
+     height="322px"
+    />
+    <p><a href="#">Collared Button Up Shirt</a></p>
+    </div>
+    <div class="row">
+    <img
+     src="Images/foryou3.jpg"
+     width="254px"
+     height="322px"
+    />
+    <p><a href="#">Denim Jeans</a></p>
+    </div>
+    <div class="row">
+      <img
+       src="Images/foryou4.jpg"
+       width="254px"
+       height="322px"
+      />
+      <p><a href="#">Green Oversized Blazer</a></p>
+    </div>
+  </div>
+</section>
+
+<!----------------Outfit Ideas------------------->
+
+<div class="pinterest">
+  <h4>Outfit Ideas</h4> 
+  <a href=”https://www.pinterest.jp/yur1no_t/image/“> <img
+      src="Images/Screenshotdesktop.png"
+      class="pinterestimg center"
+  /></a>
+</div>
+
+<!--------------------Sign Up---------------------->
+
+<form action="action_page.php">
+
+  <div class="container">
+    <h6>Sign Up for Newsletter</h6>
+  </div>
+
+  <div class="container" >
+    <input type="text" placeholder="Email address" name="mail" required>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+  
+</form>
+
+</div>
+<!--------------------Footer---------------------->
+<footer>
+  <nav>
+    <ul>
+      <li><a href="#">Terms& Condition</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Cookies</a></li>
+      <li><a href="#">Accesibility</a></li>
+    </ul>
+  </nav>
+  <p>@2023YurinoTan</p>
+</footer>
+
+
+
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+
+// Next/previous controls
+function plusSlides(n) {
+ showSlides(slideIndex += n);
+}
+
+
+// Thumbnail image controls
+function currentSlide(n) {
+ showSlides(slideIndex = n);
+}
+
+
+function showSlides(n) {
+ let i;
+ let slides = document.getElementsByClassName("mySlides");
+ let dots = document.getElementsByClassName("dot");
+ if (n > slides.length) {slideIndex = 1}
+ if (n < 1) {slideIndex = slides.length}
+ for (i = 0; i < slides.length; i++) {
+   slides[i].style.display = "none";
+ }
+ for (i = 0; i < dots.length; i++) {
+   dots[i].className = dots[i].className.replace(" active", "");
+ }
+ slides[slideIndex-1].style.display = "block";
+ dots[slideIndex-1].className += " active";
+}</script>
+
+<script>
+function myFunction() {
+ var x = document.getElementById("myTopnav");
+ if (x.className === "topnav") {
+   x.className += " responsive";
+ } else {
+   x.className = "topnav";
+ }
+}
+</script>
+
+<script>
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+ if (window.pageYOffset >= sticky) {
+   navbar.classList.add("sticky")
+ } else {
+   navbar.classList.remove("sticky");
+ }
+}
+</script>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
